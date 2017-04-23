@@ -54,7 +54,7 @@
                                 break;
                             case 2:
                                 out.println("<td>" + cart.getBookQuantity(index) + "</td>");%>
-                                <td><form method='POST' action='${pageContext.request.contextPath}/CartController'><input type='number' name='newQty' value='' size='1'/><input style='display:none;' type='text' name='index' value='<%out.print(counter); %>' size='1' /><input type='submit' name='action' value='Update' /></form>Max Qty: <%out.print(a.getUsedQuantity());%></td>
+                                <td><form method='POST' action='${pageContext.request.contextPath}/CartController'><input style="width: 50px;" type='number' name='newQty' value='' /><input style='display:none;' type='text' name='index' value='<%out.print(counter); %>' size='1' /><input type='submit' name='action' value='Update' /></form>Max Qty: <%out.print(a.getUsedQuantity());%></td>
                                 <%out.println("<td><img src='image/images/" + isbn + ".jpg' width = '175' height = '275' </td>");
                                 out.println("<td>" + a.getBookName() + "</td>");
                                 out.println("<td><center> Used </center></td>");
@@ -63,7 +63,7 @@
                                 break;
                             case 3:
                                 out.println("<td>" + cart.getBookQuantity(index) + "</td>");%>
-            <td><form method='POST' action='${pageContext.request.contextPath}/CartController'><input type='number' name='newQty' value='' size='1'/><input style='display:none;' type='text' name='index' value='<%out.print(counter); %>' size='1' /><input type='submit' name='action' value='Update' /></form>Max Qty: <%out.print(a.getRentalQuantity());%></td>
+                                <td><form method='POST' action='${pageContext.request.contextPath}/CartController'><input type='number' name='newQty' value='' size='1'/><input style='display:none;' type='text' name='index' value='<%out.print(counter); %>' size='1' /><input type='submit' name='action' value='Update' /></form>Max Qty: <%out.print(a.getRentalQuantity());%></td>
                                 <%out.println("<td><img src='image/images/" + isbn + ".jpg' width = '175' height = '275' </td>");
                                 out.println("<td>" + a.getBookName() + "</td>");
                                 out.println("<td><center> Rental </center></td>");
@@ -72,7 +72,7 @@
                                 break;
                             case 4:
                                 out.println("<td>" + cart.getBookQuantity(index) + "</td>");%>
-            <td><form method='POST' action='${pageContext.request.contextPath}/CartController'><input type='number' name='newQty' value='' size='1'/><input style='display:none;' type='text' name='index' value='<%out.print(counter); %>' size='1' /><input type='submit' name='action' value='Update' /></form>Max Qty: <%out.print(a.getEbookQuantity());%></td>
+                                <td><form method='POST' action='${pageContext.request.contextPath}/CartController'><input type='number' name='newQty' value='' size='1'/><input style='display:none;' type='text' name='index' value='<%out.print(counter); %>' size='1' /><input type='submit' name='action' value='Update' /></form>Max Qty: <%out.print(a.getEbookQuantity());%></td>
                                 <%out.println("<td><img src='image/images/" + isbn + ".jpg' width = '175' height = '275' </td>");
                                 out.println("<td>" + a.getBookName() + "</td>");
                                 out.println("<td><center> Ebook </center></td>");

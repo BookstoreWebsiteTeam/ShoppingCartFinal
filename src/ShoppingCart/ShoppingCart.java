@@ -313,7 +313,7 @@ public class ShoppingCart {
                     if (bookType.get(i) == type) { //then makes sure the book in the cart is the same type as the book it's looking for (ebook, rental, etc.)
                         switch (type) { //switch for all the different book types
                             case 1: //new
-                                if (a.getNewQuantity() >= newQuantity) {
+                                if (a.getNewQuantity() >= newQuantity && newQuantity > 0) {
                                     changeInQuantity = newQuantity - quantityInCart.get(i);
                                     quantityInCart.set(i, newQuantity);
                                     numItemsInCart += changeInQuantity;
@@ -324,7 +324,7 @@ public class ShoppingCart {
                                 }
                                 break;
                             case 2: //used
-                                if (a.getUsedQuantity() >= newQuantity) {
+                                if (a.getUsedQuantity() >= newQuantity && newQuantity > 0) {
                                     changeInQuantity = newQuantity - quantityInCart.get(i);
                                     quantityInCart.set(i, newQuantity);
                                     numItemsInCart += changeInQuantity;
@@ -335,7 +335,7 @@ public class ShoppingCart {
                                 }
                                 break;
                             case 3: //rental
-                                if (a.getRentalQuantity() >= newQuantity) {
+                                if (a.getRentalQuantity() >= newQuantity && newQuantity > 0) {
                                     changeInQuantity = newQuantity - quantityInCart.get(i);
                                     quantityInCart.set(i, newQuantity);
                                     numItemsInCart += changeInQuantity;
@@ -346,7 +346,7 @@ public class ShoppingCart {
                                 }
                                 break;
                             case 4: //ebook
-                                if (a.getEbookQuantity() >= newQuantity) {
+                                if (a.getEbookQuantity() >= newQuantity && newQuantity > 0) {
                                     changeInQuantity = newQuantity - quantityInCart.get(i);
                                     quantityInCart.set(i, newQuantity);
                                     numItemsInCart += changeInQuantity;
