@@ -24,13 +24,16 @@ public class CartController extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {     
         //will check to see if the update function has been called
         HttpSession session = request.getSession(); //sets up session for getting the cart
-        ShoppingCart cart = (ShoppingCart)session.getAttribute("cart");
+        ShoppingCart cart = new ShoppingCart();
+        if(session.getAttribute("cart") != null) {
+            cart = (ShoppingCart)session.getAttribute("cart");
+        }
         String strAction = request.getParameter("action");
-        String indexStr = request.getParameter("index");
-        int indexInt = Integer.parseInt(indexStr); //turn the index into an int so it is compatible with the cart
 
         if(strAction != null && !strAction.equals("")) {
             if (strAction.equals("Update")) {
+                String indexStr = request.getParameter("index");
+                int indexInt = Integer.parseInt(indexStr); //turn the index into an int so it is compatible with the cart
                 String newQtyStr = request.getParameter("newQty"); //string for the newQuantity request
                 int newQtyInt = Integer.parseInt(newQtyStr);
                 Book a;
@@ -45,7 +48,7 @@ public class CartController extends HttpServlet {
                 response.sendRedirect("http://localhost:8080/BookstoreWebsite_war_exploded/shoppingCart.jsp"); //sends user back to the home page to continue searching for books
                 return;
             } else if (strAction.equals("Checkout")) {
-                response.sendRedirect("http://localhost:8080/BookstoreWebsite_war_exploded/shoppingCart.jsp"); //sends the user to the checkout page to complete their purchase
+                response.sendRedirect("http://localhost:8080/BookstoreWebsite_war_exploded/OrderInformation.jsp"); //sends the user to the checkout page to complete their purchase
                 return;
             }
         }

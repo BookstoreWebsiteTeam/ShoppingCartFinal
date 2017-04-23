@@ -10,22 +10,27 @@
 <html>
     <%@page import = "ShoppingCart.ShoppingCart, java.text.DecimalFormat" %>
     <%  DecimalFormat df = new DecimalFormat("#.00");
-        ShoppingCart cart = (ShoppingCart) session.getAttribute("cart"); %>
+        ShoppingCart cart = new ShoppingCart();
+        if (session.getAttribute("cart") != null) {
+            cart = (ShoppingCart) session.getAttribute("cart");
+        } %>
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Shopping Cart</title>
     </head>
     <body>
-        <a href ="http://localhost:8080/BookstoreWebsite/index.jsp"><img src="image/images/ksu (1).png" width = "300" height = "100" alt = "Kennesaw Logo"></a>
-        <h1> Shopping Cart</h1>
+        <a href ="http://localhost:8080/BookstoreWebsite/index.jsp"><img src="image/images/ksu (1).png" width = "350" height = "100" alt = "Kennesaw Logo"></a>
+        <h1 style = "text-align: center">Shopping Cart</h1>
         <%  int index = 0;
             int counter = 0;
             int bookType;
             String isbn;
             Book a;%>
-        <table border="1">
+        <%if (session.getAttribute("cart") != null) { %>
+        <table style ="margin: 0 auto;" border="1">
             <thead>
+
                 <tr>
                     <th>Qty</th>
                     <th>Update Qty</th>
@@ -37,7 +42,7 @@
                 </tr>
             </thead>
             <tbody>
-                <%for (int i = 0; i < cart.size(); i++) {
+                    <%for (int i = 0; i < cart.size(); i++) {
                         a = cart.getBook(i);
                         isbn = a.getIsbn();
                         bookType = cart.getBookType(index);
@@ -45,7 +50,7 @@
                         switch (bookType) {
                             case 1:
                                 out.println("<td>" + cart.getBookQuantity(index) + "</td>");%>
-                                <td><form method='POST' action='${pageContext.request.contextPath}/CartController'><input type='number' size='1' name='newQty' value=''/><input style='display:none;' type='text' name='index' value='<%out.print(counter); %>' size='1' /><input type='submit' name='action' value='Update' /></form>Max Qty: <%out.print(a.getNewQuantity());%></td>
+                                <td><form method='POST' action='${pageContext.request.contextPath}/CartController'><input style="width: 50px;" type='number' name='newQty' value=''/><input style='display:none;' type='text' name='index' value='<%out.print(counter); %>' size='1' /><input type='submit' name='action' value='Update' /></form>Max Qty: <%out.print(a.getNewQuantity());%></td>
                                 <%out.println("<td><img src='image/images/" + isbn + ".jpg' width = '175' height = '275' </td>");
                                 out.println("<td>" + a.getBookName() + "</td>");
                                 out.println("<td><center> New </center></td>");
@@ -63,7 +68,7 @@
                                 break;
                             case 3:
                                 out.println("<td>" + cart.getBookQuantity(index) + "</td>");%>
-                                <td><form method='POST' action='${pageContext.request.contextPath}/CartController'><input type='number' name='newQty' value='' size='1'/><input style='display:none;' type='text' name='index' value='<%out.print(counter); %>' size='1' /><input type='submit' name='action' value='Update' /></form>Max Qty: <%out.print(a.getRentalQuantity());%></td>
+                                <td><form method='POST' action='${pageContext.request.contextPath}/CartController'><input style="width: 50px;" type='number' name='newQty' value='' /><input style='display:none;' type='text' name='index' value='<%out.print(counter); %>' size='1' /><input type='submit' name='action' value='Update' /></form>Max Qty: <%out.print(a.getRentalQuantity());%></td>
                                 <%out.println("<td><img src='image/images/" + isbn + ".jpg' width = '175' height = '275' </td>");
                                 out.println("<td>" + a.getBookName() + "</td>");
                                 out.println("<td><center> Rental </center></td>");
@@ -72,7 +77,7 @@
                                 break;
                             case 4:
                                 out.println("<td>" + cart.getBookQuantity(index) + "</td>");%>
-                                <td><form method='POST' action='${pageContext.request.contextPath}/CartController'><input type='number' name='newQty' value='' size='1'/><input style='display:none;' type='text' name='index' value='<%out.print(counter); %>' size='1' /><input type='submit' name='action' value='Update' /></form>Max Qty: <%out.print(a.getEbookQuantity());%></td>
+                                <td><form method='POST' action='${pageContext.request.contextPath}/CartController'><input style="width: 50px;" type='number' name='newQty' value='' /><input style='display:none;' type='text' name='index' value='<%out.print(counter); %>' size='1' /><input type='submit' name='action' value='Update' /></form>Max Qty: <%out.print(a.getEbookQuantity());%></td>
                                 <%out.println("<td><img src='image/images/" + isbn + ".jpg' width = '175' height = '275' </td>");
                                 out.println("<td>" + a.getBookName() + "</td>");
                                 out.println("<td><center> Ebook </center></td>");
@@ -84,6 +89,15 @@
                         out.println("</tr>");
                         index++;
                         counter++;
+                    }
+                } else {
+                    out.println("<table style='margin: 0 auto;'>");
+                    out.println("<thead>");
+                    out.println("<tr>");
+                    out.println("<td width = '100%' style = 'text-align: center' style = 'font-size: larger' > Shopping Cart is Empty</td>");
+                    out.println("<tr>");
+                    out.println("</thead>");
+                    out.println("</table>");
                 }
                 %>
             </tbody>
@@ -94,8 +108,7 @@
                 <%out.println("<pre style='font-size: large'>                                                                       Total       $" + cart.getTotalPrice() + "</pre>");%>
 
         <form method='POST' action='${pageContext.request.contextPath}/CartController'>
-            <input type="submit" name ="action" value="Continue Shopping"/>
-            <input type="submit" name="action" value="Checkout"/>
+           <pre>                                                                        <input type="submit" name ="action" value="Continue Shopping"/><input type="submit" name="action" value="Checkout"/></pre>
         </form>
     </body>
 </html>
