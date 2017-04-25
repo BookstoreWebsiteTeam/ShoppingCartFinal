@@ -1,15 +1,17 @@
 
 package ShoppingCart;
 
+//import Exceptions.StockException;
+
 import java.io.Serializable;
 import java.util.Arrays;
 
 /**
  * Created by Myles on 3/28/17.
  */
-public class Book implements Serializable{
+public class Book implements Serializable {
 
-    private String isbn;
+    private long isbn;
     private String bookName;
     private String[] author;
     private String semester;
@@ -27,12 +29,13 @@ public class Book implements Serializable{
     private double rentalPrice;
     private double ebookPrice;
     private String description;
+    private String isbnForCovers;
 
-    public String getIsbn() {
+    public long getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(String isbn) {
+    public void setIsbn(long isbn) {
         this.isbn = isbn;
     }
 
@@ -172,8 +175,62 @@ public class Book implements Serializable{
         this.description = description;
     }
 
+    public String getIsbnForCovers() {
+        return isbnForCovers;
+    }
+
+    public void setIsbnForCovers(String isbnForCovers) {
+        this.isbnForCovers = isbnForCovers;
+    }
+
+   /* public void changeNewQuantity(int orderQuantity) throws StockException
+    {
+        StockException stockException = new StockException(getNewQuantity(), orderQuantity);
+        stockException.changeStock();
+        setNewQuantity(stockException.getNewStock());
+    }
+
+    public void changeUsedQuantity(int orderQuantity) throws StockException
+    {
+        StockException stockException = new StockException(getUsedQuantity(), orderQuantity);
+        stockException.changeStock();
+        setUsedQuantity(stockException.getNewStock());
+    }
+
+    public void changeRentalQuantity(int orderQuantity) throws StockException
+    {
+        StockException stockException = new StockException(getRentalQuantity(), orderQuantity);
+        stockException.changeStock();
+        setUsedQuantity(stockException.getNewStock());
+    }
+
+    public boolean checkNewQuantity(int orderQuantity) throws StockException
+    {
+        StockException stockException = new StockException(getNewQuantity(), orderQuantity);
+        return stockException.checkStock();
+    }
+
+    public boolean checkUsedQuantity(int orderQuantity) throws StockException
+    {
+        StockException stockException = new StockException(getUsedQuantity(), orderQuantity);
+        return stockException.checkStock();
+    }
+
+    public boolean checkRentalQuantity(int orderQuantity) throws StockException
+    {
+        StockException stockException = new StockException(getRentalQuantity(), orderQuantity);
+        return stockException.checkStock();
+    }*/
+
+    public boolean checkEbookQuantity() {
+        if (getEbookQuantity() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     /**
-     *
      * @return Book information string
      */
     @Override

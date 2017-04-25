@@ -44,7 +44,7 @@
             <tbody>
                     <%for (int i = 0; i < cart.size(); i++) {
                         a = cart.getBook(i);
-                        isbn = a.getIsbn();
+                        isbn = a.getIsbnForCovers();
                         bookType = cart.getBookType(index);
                         out.println("<tr>");
                         switch (bookType) {

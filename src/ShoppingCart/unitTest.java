@@ -9,7 +9,7 @@ public class unitTest {
         authors[1] = "Jimmy Hendrix";
         isbn = "978-0073376356";
         Book test1 = new Book();
-        test1.setIsbn(isbn);
+        test1.setIsbnForCovers(isbn);
         test1.setBookName("Chemistry");
         test1.setAuthor(authors);
         test1.setSemester("Fall");

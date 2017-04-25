@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ShoppingCart;
+package Servlets;
+
+import ShoppingCart.ShoppingCart;
+import ShoppingCart.Book;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -38,7 +41,7 @@ public class CartController extends HttpServlet {
                 int newQtyInt = Integer.parseInt(newQtyStr);
                 Book a;
                 a = cart.getBook(indexInt);
-                String isbn = a.getIsbn();
+                String isbn = a.getIsbnForCovers();
                 int bookType = cart.getBookType(indexInt);
                 cart.updateCart(isbn, newQtyInt, bookType); //updates the books in the cart at the index specified
                 session.setAttribute("cart", cart); //posts the new cart to the session

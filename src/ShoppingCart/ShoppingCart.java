@@ -260,7 +260,7 @@ public class ShoppingCart {
         try {
             for (int i = 0; i < cart.size(); i++) { //iterates through cart
                 a = cart.get(i);
-                bookISBN = a.getIsbn();
+                bookISBN = a.getIsbnForCovers();
                 if (bookISBN.equals(ISBN)) { //checks to see if the book in the cart is the one it's looking for
                     if (bookType.get(i) == type) { //checks to see if the found book is also the same type as the one it's looking for
                         switch (type) { //this is all for the price tracking with the different types.
@@ -307,7 +307,7 @@ public class ShoppingCart {
             for (int i = 0; i < cart.size(); i++) { //iterates through the cart
 
                 a = cart.get(i);
-                tempIsbn = a.getIsbn();
+                tempIsbn = a.getIsbnForCovers();
 
                 if (isbn.equals(tempIsbn)) { //looks for the specific book in the array
                     if (bookType.get(i) == type) { //then makes sure the book in the cart is the same type as the book it's looking for (ebook, rental, etc.)

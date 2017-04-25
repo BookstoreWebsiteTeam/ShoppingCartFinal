@@ -1,4 +1,4 @@
-package ShoppingCart;
+package Servlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
