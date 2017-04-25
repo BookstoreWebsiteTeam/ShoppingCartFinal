@@ -105,10 +105,11 @@
 
                 <%out.println("<pre style='font-size: large'>                                                                       Subtotal    $" + cart.getSubtotal() + "</pre>");%>
                 <%out.println("<pre style='font-size: large'>                                                                       Tax         $" + cart.getCalcTax()+ "</pre>");%>
+                <%out.println("<pre style='font-size: large'>                                                                       Shipping    $" + cart.getShipping()+ "</pre>");%>
                 <%out.println("<pre style='font-size: large'>                                                                       Total       $" + cart.getTotalPrice() + "</pre>");%>
 
         <form method='POST' action='${pageContext.request.contextPath}/CartController'>
-           <pre>                                                                        <input type="submit" name ="action" value="Continue Shopping"/><input type="submit" name="action" value="Checkout"/></pre>
+           <pre>                                                                                    <input type="submit" name ="action" value="Continue Shopping"/><input type="submit" name="action" value="Checkout"/></pre>
         </form>
     </body>
 </html>

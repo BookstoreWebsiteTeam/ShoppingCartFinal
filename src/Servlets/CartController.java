@@ -39,14 +39,22 @@ public class CartController extends HttpServlet {
                 int indexInt = Integer.parseInt(indexStr); //turn the index into an int so it is compatible with the cart
                 String newQtyStr = request.getParameter("newQty"); //string for the newQuantity request
                 int newQtyInt = Integer.parseInt(newQtyStr);
+
                 Book a;
                 a = cart.getBook(indexInt);
                 String isbn = a.getIsbnForCovers();
                 int bookType = cart.getBookType(indexInt);
-                cart.updateCart(isbn, newQtyInt, bookType); //updates the books in the cart at the index specified
-                session.setAttribute("cart", cart); //posts the new cart to the session
-                response.sendRedirect("http://localhost:8080/BookstoreWebsite_war_exploded/shoppingCart.jsp"); //reloads the Shopping Cart page
-                return;
+                if(newQtyInt != 0) {
+                    cart.updateCart(isbn, newQtyInt, bookType); //updates the books in the cart at the index specified
+                    session.setAttribute("cart", cart); //posts the new cart to the session
+                    response.sendRedirect("http://localhost:8080/BookstoreWebsite_war_exploded/shoppingCart.jsp"); //reloads the Shopping Cart page
+                    return;
+                } else {
+                    cart.removeFromCart(isbn, bookType);
+                    session.setAttribute("cart", cart); //posts the new cart to the session
+                    response.sendRedirect("http://localhost:8080/BookstoreWebsite_war_exploded/shoppingCart.jsp"); //reloads the Shopping Cart page
+                    return;
+                }
             } else if (strAction.equals("Continue Shopping")) {
                 response.sendRedirect("http://localhost:8080/BookstoreWebsite_war_exploded/shoppingCart.jsp"); //sends user back to the home page to continue searching for books
                 return;

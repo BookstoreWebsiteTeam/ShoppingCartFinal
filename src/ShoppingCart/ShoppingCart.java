@@ -151,8 +151,20 @@ public class ShoppingCart {
         if (checkForOnlyEbooks()) {
             totalPrice = subtotalPrice + (subtotalPrice * tax);
         } else {
-            totalPrice = subtotalPrice + ((subtotalPrice + shippingCost) * tax);
+            totalPrice = subtotalPrice + ((subtotalPrice) * tax + shippingCost);
         }
+    }
+
+    public double getShipping() {
+        double returnShipping;
+        if(checkForOnlyEbooks() != true) {
+            returnShipping = shippingCost;
+            return returnShipping;
+        } else {
+            returnShipping = 0;
+            return returnShipping;
+        }
+
     }
 
     public void addToCart(Book newBook, int quantity, int type) {
