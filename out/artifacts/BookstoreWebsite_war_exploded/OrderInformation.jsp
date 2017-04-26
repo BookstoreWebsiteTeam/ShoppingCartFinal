@@ -9,7 +9,7 @@
     }
 </style>
 <body>
-    <table width = "100%">
+    <table width = "75%">
         <tr>
             <td width= "75%"><a href="http://localhost:8080/BookstoreWebsite_war_exploded/index.jsp"><img src="image/images/ksu (1).png" width="350" height="100" alt="Kennesaw Logo"></a></td>
             <td width="25%">
@@ -128,7 +128,7 @@
             </tr>
         </table>
 
-        <pre>               <input type="checkbox" name="shippingAsBilling" value="yes"> Shipping Address is Same as Billing address </pre>
+        <pre>           <input type="checkbox" name="shippingAsBilling" value="yes"> Shipping Address is same as Billing address </pre>
 
         <table>
             <tr>
@@ -239,7 +239,7 @@
             </tr>
         </table>
 
-        <pre>               <input type="submit" value="Submit" name="action"></pre>
+        <pre>           <input type="submit" value="Submit" name="action"></pre>
     </form>
 </body>
 </html>

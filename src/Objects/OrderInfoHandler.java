@@ -1,4 +1,4 @@
-package OrderInfo;
+package Objects;
 
 /**
  * Created by Adam Hayes on 4/24/2017.
@@ -72,6 +72,10 @@ public class OrderInfoHandler {
     public void setBillingAddress(String billingAddress) {
         this.billingAddress = billingAddress;
     }
+
+    public void setBillingName(String billingName){ this.billingName = billingName; }
+
+    public String getBillingName() { return billingName; }
 
     public String getBillingAddressLine2() {
         return billingAddressLine2;

@@ -33,8 +33,8 @@
         test1.setRentalPrice(55.31);
         test1.setEbookPrice(67.93);
         test1.setDescription("This is a textbook for Chemistry! Apparently also SWE 3313 lol"); %>
-        <% cart.addToCart(test1, 3, 1);
-        cart.addToCart(test1, 1, 2); %>
+        <% //cart.addToCart(test1, 3, 1);
+        cart.addToCart(test1, 1, 4); %>
         <% session.setAttribute("cart", cart); %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Shopping Cart</title>

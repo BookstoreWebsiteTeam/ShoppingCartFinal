@@ -128,7 +128,7 @@
             </tr>
         </table>
 
-        <pre>           <input type="checkbox" name="shippingAsBilling" value="yes"> Shipping Address is Same as Billing address </pre>
+        <pre>           <input type="checkbox" name="shippingAsBilling" value="yes"> Shipping Address is same as Billing address </pre>
 
         <table>
             <tr>
@@ -239,7 +239,7 @@
             </tr>
         </table>
 
-        <pre>           <input type="submit" value="Submit" name="action"></pre>
+        <pre>           <input type="submit" value="Submit" name="orderInfoSubmit"></pre>
     </form>
 </body>
 </html>

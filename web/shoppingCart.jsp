@@ -19,6 +19,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Shopping Cart</title>
     </head>
+    <style>
+        pre {
+            font-family: "Times New Roman";
+        }
+    </style>
     <body>
         <a href ="http://localhost:8080/BookstoreWebsite/index.jsp"><img src="image/images/ksu (1).png" width = "350" height = "100" alt = "Kennesaw Logo"></a>
         <h1 style = "text-align: center">Shopping Cart</h1>
@@ -27,7 +32,7 @@
             int bookType;
             String isbn;
             Book a;%>
-        <%if (session.getAttribute("cart") != null) { %>
+        <%if (cart.size() != 0) { %>
         <table style ="margin: 0 auto;" border="1">
             <thead>
 
@@ -99,17 +104,18 @@
                     out.println("</thead>");
                     out.println("</table>");
                 }
+
                 %>
             </tbody>
         </table>
 
-                <%out.println("<pre style='font-size: large'>                                                                       Subtotal    $" + cart.getSubtotal() + "</pre>");%>
-                <%out.println("<pre style='font-size: large'>                                                                       Tax         $" + cart.getCalcTax()+ "</pre>");%>
-                <%out.println("<pre style='font-size: large'>                                                                       Shipping    $" + cart.getShipping()+ "</pre>");%>
-                <%out.println("<pre style='font-size: large'>                                                                       Total       $" + cart.getTotalPrice() + "</pre>");%>
+                <%out.println("<pre style='font-size: large; text-align: center'>Subtotal    $" + cart.getSubtotal() + "</pre>");%>
+                <%out.println("<pre style='font-size: large; text-align: center'>Tax         $" + cart.getCalcTax()+ "</pre>");%>
+                <%out.println("<pre style='font-size: large; text-align: center'>Shipping    $" + df.format(cart.getShipping())+ "</pre>");%>
+                <%out.println("<pre style='font-size: large; text-align: center'>Total       $" + cart.getTotalPrice() + "</pre>");%>
 
         <form method='POST' action='${pageContext.request.contextPath}/CartController'>
-           <pre>                                                                                    <input type="submit" name ="action" value="Continue Shopping"/><input type="submit" name="action" value="Checkout"/></pre>
+           <div style="text-align: center"><input type="submit" name ="action" value="Continue Shopping"/><input type="submit" name="action" value="Checkout"/></div>
         </form>
     </body>
 </html>
