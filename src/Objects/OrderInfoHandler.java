@@ -16,6 +16,9 @@ public class OrderInfoHandler {
     private String billingCity;
     private int billingZip;
     private String billingState;
+    private String emailAddress;
+    private String paymentChoice;
+
 
     public String getShippingName() {
         return shippingName;
@@ -108,6 +111,14 @@ public class OrderInfoHandler {
     public void setBillingState(String billingState) {
         this.billingState = billingState;
     }
+
+    public void setEmailAddress(String emailAddress) { this.emailAddress = emailAddress; }
+
+    public String getEmailAddress() { return emailAddress; }
+
+    public void setPaymentChoice(String paymentChoice) { this.paymentChoice = paymentChoice; }
+
+    public String getPaymentChoice() { return paymentChoice; }
 
     public void shippingAsBilling() {
         billingName = shippingName;

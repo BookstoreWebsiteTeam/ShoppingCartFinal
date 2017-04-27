@@ -32,6 +32,7 @@
         out.println(orderInfo.getBillingCity() + "<br>");
         out.println(orderInfo.getBillingState() + "<br>");
         out.println(orderInfo.getBillingZip() + "<br>");
+        out.println("Email Address: " + orderInfo.getBillingZip() + "<br>");
     %>
 </body>
 </html>

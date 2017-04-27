@@ -7,31 +7,24 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-    <% OrderInfoHandler orderInfo = new OrderInfoHandler();
-        orderInfo = (OrderInfoHandler)session.getAttribute("orderInfo");
-    %>
 <head>
     <title>Payment Information</title>
 </head>
 <body>
-<h1>Shipping Info: </h1>
-    <%
-        out.println("<br>" + orderInfo.getShippingName() + "<br>");
-        out.println(orderInfo.getShippingAddress() + "<br>");
-        out.println(orderInfo.getShippingAddressLine2() + "<br>");
-        out.println(orderInfo.getShippingCity() + "<br>");
-        out.println(orderInfo.getShippingState() + "<br>");
-        out.println(orderInfo.getShippingZip() + "<br>");
-    %>
+    <h1>&emsp;&emsp;Please Select a Payment Type</h1>
+    <form method="post" action='${pageContext.request.contextPath}/paymentInfoController'>
+        <label> Visa/Mastercard <input type="radio" name="creditCard" value="creditCard" checked/></label>
+        <br>
+        <br>
+            <<input type="text">
+        <%-- INSERT CREDIT CARD BOXES HERE --%>
+        <br>
+        <br>
+        <label>PayPal <input type="radio" name="paypal" value="paypal"/></label>
+        <br>
+        <br>
+        <label>Financial Aid <input type="radio" name="financialAid" value="financialAid"/></label>
 
-    <h1> Billing Info: </h1>
-    <%
-        out.println("<br>" +orderInfo.getBillingName() + "<br>");
-        out.println(orderInfo.getBillingAddress() + "<br>");
-        out.println(orderInfo.getBillingAddressLine2() + "<br>");
-        out.println(orderInfo.getBillingCity() + "<br>");
-        out.println(orderInfo.getBillingState() + "<br>");
-        out.println(orderInfo.getBillingZip() + "<br>");
-    %>
+    </form>
 </body>
 </html>

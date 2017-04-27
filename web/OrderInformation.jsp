@@ -126,6 +126,11 @@
                     <input type='text' name='shippingZip' value='' placeholder='Zip Code'/>
                 </td>
             </tr>
+            <tr>
+                <br>
+                <td><p style="text-align: right"> Email:</p></td>
+                <td> <input type="email" name='email' value='' placeholder='Email Address'></td>
+            </tr>
         </table>
 
         <pre>           <input type="checkbox" name="shippingAsBilling" value="yes"> Shipping Address is same as Billing address </pre>

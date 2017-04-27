@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="215a3252-4a56-4bbf-b7aa-aca152161650" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BookstoreWebsite_war_exploded/WEB-INF/classes/Objects/OrderInfoHandler.class" afterPath="$PROJECT_DIR$/out/artifacts/BookstoreWebsite_war_exploded/WEB-INF/classes/Objects/OrderInfoHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BookstoreWebsite_war_exploded/WEB-INF/classes/Servlets/OrderInfoController.class" afterPath="$PROJECT_DIR$/out/artifacts/BookstoreWebsite_war_exploded/WEB-INF/classes/Servlets/OrderInfoController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BookstoreWebsite/Objects/OrderInfoHandler.class" afterPath="$PROJECT_DIR$/out/production/BookstoreWebsite/Objects/OrderInfoHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BookstoreWebsite/Servlets/OrderInfoController.class" afterPath="$PROJECT_DIR$/out/production/BookstoreWebsite/Servlets/OrderInfoController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BookstoreWebsite_war_exploded/OrderInformation.jsp" afterPath="$PROJECT_DIR$/out/artifacts/BookstoreWebsite_war_exploded/OrderInformation.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Objects/OrderInfoHandler.java" afterPath="$PROJECT_DIR$/src/Objects/OrderInfoHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Servlets/OrderInfoController.java" afterPath="$PROJECT_DIR$/src/Servlets/OrderInfoController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/OrderInformation.jsp" afterPath="$PROJECT_DIR$/web/OrderInformation.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/paymentInfo.jsp" afterPath="$PROJECT_DIR$/web/paymentInfo.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderInfoController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OrderInfoController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Servlets/OrderInfoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="70" lean-forward="true" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
+            <state relative-caret-position="255">
+              <caret line="15" column="81" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,22 +83,25 @@
       <file leaf-file-name="OrderInfoHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Objects/OrderInfoHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1069">
-              <caret line="124" column="16" lean-forward="true" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
+            <state relative-caret-position="340">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
-                <element signature="e#1485#1486#0" expanded="true" />
-                <element signature="e#1521#1522#0" expanded="true" />
+                <element signature="e#1553#1554#0" expanded="true" />
+                <element signature="e#1589#1590#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderInformation.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OrderInformation.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/OrderInformation.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="202" column="47" lean-forward="false" selection-start-line="202" selection-start-column="47" selection-end-line="202" selection-end-column="47" />
-              <folding />
+            <state relative-caret-position="595">
+              <caret line="35" column="94" lean-forward="true" selection-start-line="35" selection-start-column="94" selection-end-line="35" selection-end-column="94" />
+              <folding>
+                <element signature="e#646#652#0#HTML" expanded="true" />
+                <element signature="e#652#658#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,9 +109,24 @@
       <file leaf-file-name="paymentInfo.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/paymentInfo.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="58" lean-forward="false" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
-              <folding />
+            <state relative-caret-position="306">
+              <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="30" />
+              <folding>
+                <element signature="e#342#348#0#HTML" expanded="true" />
+                <element signature="e#348#354#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="paymentInfoController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Servlets/paymentInfoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="68" lean-forward="false" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,8 +146,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -153,13 +179,15 @@
         <option value="$PROJECT_DIR$/src/Servlets/CartController.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/shoppingCart.jsp" />
-        <option value="$PROJECT_DIR$/web/OrderInformation.jsp" />
-        <option value="$PROJECT_DIR$/web/paymentInfo.jsp" />
         <option value="$PROJECT_DIR$/src/ShoppingCart/ShoppingCart.java" />
         <option value="$PROJECT_DIR$/src/Objects/Book.java" />
         <option value="$PROJECT_DIR$/src/Objects/ShoppingCart.java" />
-        <option value="$PROJECT_DIR$/src/Objects/OrderInfoHandler.java" />
+        <option value="$PROJECT_DIR$/web/OrderInformation.jsp" />
         <option value="$PROJECT_DIR$/src/Servlets/OrderInfoController.java" />
+        <option value="$PROJECT_DIR$/web/TestOrderInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/Objects/OrderInfoHandler.java" />
+        <option value="$PROJECT_DIR$/src/Servlets/paymentInfoController.java" />
+        <option value="$PROJECT_DIR$/web/paymentInfo.jsp" />
       </list>
     </option>
   </component>
@@ -772,12 +800,12 @@
       <workItem from="1493165258874" duration="2679000" />
       <workItem from="1493218523973" duration="3613000" />
       <workItem from="1493252660315" duration="1993000" />
-      <workItem from="1493316649008" duration="5595000" />
+      <workItem from="1493316649008" duration="8488000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38075000" />
+    <option name="totallyTimeSpent" value="40968000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -842,24 +870,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Objects/ShoppingCart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5644">
-          <caret line="348" column="90" lean-forward="false" selection-start-line="348" selection-start-column="90" selection-end-line="348" selection-end-column="90" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servlets/CartController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/shoppingCart.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1632">
@@ -872,7 +882,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-          <folding />
+          <folding>
+            <element signature="e#646#652#0#HTML" expanded="true" />
+            <element signature="e#652#658#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -958,7 +971,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-          <folding />
+          <folding>
+            <element signature="e#646#652#0#HTML" expanded="true" />
+            <element signature="e#652#658#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1018,7 +1034,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#646#652#0#HTML" expanded="true" />
+            <element signature="e#652#658#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1078,7 +1097,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#646#652#0#HTML" expanded="true" />
+            <element signature="e#652#658#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1206,14 +1228,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servlets/CartController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Objects/ShoppingCart.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1224,11 +1238,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/paymentInfo.jsp">
+    <entry file="file://$PROJECT_DIR$/src/Servlets/CartController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="58" lean-forward="false" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+        <state relative-caret-position="85">
+          <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/TestOrderInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Objects/OrderInfoHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#1553#1554#0" expanded="true" />
+            <element signature="e#1589#1590#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servlets/OrderInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="81" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1240,31 +1283,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/OrderInformation.jsp">
+    <entry file="file://$PROJECT_DIR$/src/Servlets/paymentInfoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="202" column="47" lean-forward="false" selection-start-line="202" selection-start-column="47" selection-end-line="202" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Objects/OrderInfoHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1069">
-          <caret line="124" column="16" lean-forward="true" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
+        <state relative-caret-position="272">
+          <caret line="16" column="68" lean-forward="false" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
           <folding>
-            <element signature="e#1485#1486#0" expanded="true" />
-            <element signature="e#1521#1522#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servlets/OrderInfoController.java">
+    <entry file="file://$PROJECT_DIR$/web/paymentInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="70" lean-forward="true" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
+        <state relative-caret-position="306">
+          <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#342#348#0#HTML" expanded="true" />
+            <element signature="e#348#354#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/OrderInformation.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="94" lean-forward="true" selection-start-line="35" selection-start-column="94" selection-end-line="35" selection-end-column="94" />
+          <folding>
+            <element signature="e#646#652#0#HTML" expanded="true" />
+            <element signature="e#652#658#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
