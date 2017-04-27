@@ -5,8 +5,8 @@
  */
 package Servlets;
 
-import ShoppingCart.ShoppingCart;
-import ShoppingCart.Book;
+import Objects.ShoppingCart;
+import Objects.Book;
 
 import java.io.IOException;
 import java.io.PrintWriter;

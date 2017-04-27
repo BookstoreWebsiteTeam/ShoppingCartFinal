@@ -1,4 +1,4 @@
-package ShoppingCart;
+package Objects;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ public class ShoppingCart {
     //integers needs to be sent at a time. They will be stored in an Array in the same position as the ArrayList that 
     //the book object is in.
     private int numItemsInCart; //displays total num of items in the cart
-    private boolean onlyEbook; //used to determing if shipping needs to be applied (does not with only ebooks)
+    private boolean onlyEbook; //used to determine if shipping needs to be applied (does not with only ebooks)
     private double subtotalPrice; //tracks price without tax and shipping added
     private double totalPrice; //tracks price with shipping and tax added
     private ArrayList<Book> cart = new ArrayList<>(); //used to store Book items in the shopping cart
@@ -136,10 +136,6 @@ public class ShoppingCart {
         return numItemsInCart;
     }
 
-    private void setEbookValue(boolean ebook) { //changes the value of the boolean onlyEbook, false if there is anything but ebooks in the cart.
-        onlyEbook = ebook;
-    }
-
     public String getTotalPrice() { //returns the total price of the items in the cart (shipping and tax included)
         calculateTotalPrice();
         String returnTotalPrice = df.format(totalPrice);
@@ -164,7 +160,20 @@ public class ShoppingCart {
             returnShipping = 0;
             return returnShipping;
         }
+    }
 
+    public boolean checkForOnlyEbooks() {
+        //This method scans the bookTypes array, looking for any instances of ebooks values (4),
+        //and if it finds any books that are not ebooks, it will return false, if all books in the cart are ebooks,
+        //the method will return true.
+        int checkingForEbooks;
+        for (int i = 0; i < cart.size(); i++) {
+            checkingForEbooks = bookType.get(i);
+            if (checkingForEbooks != 4) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public void addToCart(Book newBook, int quantity, int type) {
@@ -241,25 +250,6 @@ public class ShoppingCart {
         } catch (Exception e) {
             System.out.println("Error Adding to Cart: " + e.getMessage());
         }
-    }
-
-    public void removeShipping() {
-        //if all regular books are deleted, and only ebooks remain, this should remove the shipping cost from the totalPrice
-        totalPrice -= shippingCost;
-    }
-
-    public boolean checkForOnlyEbooks() {
-        //This method scans the bookTypes array, looking for any instances of ebooks values (4),
-        //and if it finds any books that are not ebooks, it will return false, if all books in the cart are ebooks,
-        //the method will return true.
-        int checkingForEbooks;
-        for (int i = 0; i < cart.size(); i++) {
-            checkingForEbooks = bookType.get(i);
-            if (checkingForEbooks != 4) {
-                return false;
-            }
-        }
-        return true;
     }
 
     public void removeFromCart(String ISBN, int type) {

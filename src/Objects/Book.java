@@ -1,5 +1,5 @@
 
-package ShoppingCart;
+package Objects;
 
 //import Exceptions.StockException;
 

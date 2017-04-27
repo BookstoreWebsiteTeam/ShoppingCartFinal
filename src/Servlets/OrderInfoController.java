@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- * Created by Bookstore on 4/23/2017.
+ * Created by Adam Hayes on 4/23/2017.
  */
 @WebServlet(name = "OrderInfoController", urlPatterns = {"/OrderInfoController"})
 public class OrderInfoController extends HttpServlet {
