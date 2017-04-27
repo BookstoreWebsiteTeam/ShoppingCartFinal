@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 
     <head>
-        <%@page import = "java.io.*, java.util.*, ShoppingCart.Book, ShoppingCart.ShoppingCart" %>
+        <%@page import = "java.io.*, java.util.*, Objects.Book, Objects.ShoppingCart" %>
         <%ShoppingCart cart = new ShoppingCart(); %>
         <%String isbn;
         String[] authors = new String[2];

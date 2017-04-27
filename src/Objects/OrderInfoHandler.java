@@ -118,5 +118,12 @@ public class OrderInfoHandler {
         billingZip = shippingZip;
     }
 
-
+    public boolean validZip(int zip) {
+        int zipLength = (int)(Math.log10(zip) + 1);
+        if(zipLength != 5) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }

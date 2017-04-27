@@ -27,36 +27,62 @@ public class OrderInfoController extends HttpServlet {
             String shippingCity = request.getParameter("shippingCity");
             String shippingState = request.getParameter("shippingState");
             String strShippingZip = request.getParameter("shippingZip");
-            int intShippingZip = Integer.parseInt(strShippingZip);
-            if (request.getParameter("shippingAsBilling").equals("yes")) {
-                orderInfo.setShippingName(shippingName);
-                orderInfo.setShippingAddress(shippingAddress1);
-                orderInfo.setShippingAddressLine2(shippingAddress2);
-                orderInfo.setShippingCity(shippingCity);
-                orderInfo.setShippingState(shippingState);
-                orderInfo.setShippingZip(intShippingZip);
-                orderInfo.shippingAsBilling();
-            } else {
-                String billingName = request.getParameter("billingName");
-                String billingAddress1 = request.getParameter("billingAddress");
-                String billingAddress2 = request.getParameter("billingAddressLine2");
-                String billingCity = request.getParameter("billingCity");
-                String billingState = request.getParameter("billingState");
-                String strBillingZip = request.getParameter("billingZip");
-                int intBillingZip = Integer.parseInt(strBillingZip);
-                orderInfo.setBillingName(billingName);
-                orderInfo.setBillingAddress(billingAddress1);
-                orderInfo.setBillingAddressLine2(billingAddress2);
-                orderInfo.setBillingCity(billingCity);
-                orderInfo.setBillingState(billingState);
-                orderInfo.setBillingZip(intBillingZip);
+            String billingName = request.getParameter("billingName");
+            String billingAddress1 = request.getParameter("billingAddress");
+            String billingAddress2 = request.getParameter("billingAddressLine2");
+            String billingCity = request.getParameter("billingCity");
+            String billingState = request.getParameter("billingState");
+            String strBillingZip = request.getParameter("billingZip");
+            String shippingAsBilling = "";
+            if (request.getParameter("shippingAsBilling") != null) {shippingAsBilling = request.getParameter("shippingAsBilling"); }
+            int intBillingZip = 0;
+            if (!strBillingZip.equals("")) {intBillingZip = Integer.parseInt(strBillingZip); }
+            int intShippingZip = 0;
+            if (!strShippingZip.equals("")) {intShippingZip = Integer.parseInt(strShippingZip); }
+            if (!shippingName.equals("") && !shippingAddress1.equals("") && !shippingCity.equals("") && !shippingState.equals("") && !strShippingZip.equals("")) {
+                if (shippingAsBilling.equals("yes")) {
+                    if(orderInfo.validZip(intShippingZip)) {
+                        orderInfo.setShippingName(shippingName);
+                        orderInfo.setShippingAddress(shippingAddress1);
+                        orderInfo.setShippingAddressLine2(shippingAddress2);
+                        orderInfo.setShippingCity(shippingCity);
+                        orderInfo.setShippingState(shippingState);
+                        orderInfo.setShippingZip(intShippingZip);
+                        orderInfo.shippingAsBilling();
+                    } else {
+                        session.setAttribute("orderInfo", orderInfo); //posts the new orderInfo to the session
+                        response.sendRedirect("http://localhost:8080/BookstoreWebsite_war_exploded/OrderInformation.jsp"); //sends the user to the paymentInfo page
+                        return;
+                    }
+                } else {
+                    if (!billingName.equals("") && !billingAddress1.equals("") && !billingCity.equals("") && !billingState.equals("") && !strBillingZip.equals("")) {
+                        if (orderInfo.validZip(intBillingZip)) {
+                            orderInfo.setShippingName(shippingName);
+                            orderInfo.setShippingAddress(shippingAddress1);
+                            orderInfo.setShippingAddressLine2(shippingAddress2);
+                            orderInfo.setShippingCity(shippingCity);
+                            orderInfo.setShippingState(shippingState);
+                            orderInfo.setShippingZip(intShippingZip);
+                            orderInfo.setBillingName(billingName);
+                            orderInfo.setBillingAddress(billingAddress1);
+                            orderInfo.setBillingAddressLine2(billingAddress2);
+                            orderInfo.setBillingCity(billingCity);
+                            orderInfo.setBillingState(billingState);
+                            orderInfo.setBillingZip(intBillingZip);
+                        }
+                    }
+                }
+                session.setAttribute("orderInfo", orderInfo); //posts the new orderInfo to the session
+                response.sendRedirect("http://localhost:8080/BookstoreWebsite_war_exploded/paymentInfo.jsp"); //sends the user to the paymentInfo page
+                return;
             }
-            session.setAttribute("orderInfo", orderInfo); //posts the new cart to the session
-            response.sendRedirect("http://localhost:8080/BookstoreWebsite_war_exploded/paymentInfo.jsp"); //reloads the Shopping Cart page
+            session.setAttribute("orderInfo", orderInfo); //posts the new orderInfo to the session
+            response.sendRedirect("http://localhost:8080/BookstoreWebsite_war_exploded/OrderInformation.jsp"); //sends the user to the paymentInfo page
             return;
         }
         session.setAttribute("orderInfo", orderInfo); //posts the new cart to the session
         response.sendRedirect("http://localhost:8080/BookstoreWebsite_war_exploded/paymentInfo.jsp"); //reloads the Shopping Cart page
+        return;
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
