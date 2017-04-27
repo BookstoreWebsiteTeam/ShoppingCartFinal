@@ -239,7 +239,7 @@
             </tr>
         </table>
 
-        <pre>           <input type="submit" value="Submit" name="action"></pre>
+        <pre>           <input type="submit" value="Submit" name="orderInfoSubmit"></pre>
     </form>
 </body>
 </html>

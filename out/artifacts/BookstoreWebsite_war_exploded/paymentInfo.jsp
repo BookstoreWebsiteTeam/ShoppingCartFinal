@@ -14,7 +14,7 @@
     <title>Payment Information</title>
 </head>
 <body>
-<h1>Shipping Info: </h1>
+    Shipping Info:
     <%
         out.println("<br>" + orderInfo.getShippingName() + "<br>");
         out.println(orderInfo.getShippingAddress() + "<br>");
@@ -24,7 +24,7 @@
         out.println(orderInfo.getShippingZip() + "<br>");
     %>
 
-    <h1> Billing Info: </h1>
+    Billing Info:
     <%
         out.println("<br>" +orderInfo.getBillingName() + "<br>");
         out.println(orderInfo.getBillingAddress() + "<br>");
