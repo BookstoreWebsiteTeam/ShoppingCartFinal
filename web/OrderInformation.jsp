@@ -239,7 +239,7 @@
                     <p style="text-align: right"> Zip:</p>
                 </td>
                 <td>
-                    <input type='text' name='billingZip' value='' placeholder='Zip Code'/>
+                    <input type='text' name='billingZip' value='' placeholder='Zip Code' maxlength='5'/>
                 </td>
             </tr>
         </table>
