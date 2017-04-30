@@ -181,27 +181,6 @@ public class ShoppingCart {
         //but can add as many books as specified. This will also check to see if the book is an ebook,
         // and will adjust the shipping if needed.
         double tempPrice;
-        switch (type) { //for price tracking
-            case 1:
-                tempPrice = newBook.getNewPrice();
-                subtotalPrice += tempPrice * quantity;
-                break;
-            case 2:
-                tempPrice = newBook.getUsedPrice();
-                subtotalPrice += tempPrice * quantity;
-                break;
-            case 3:
-                tempPrice = newBook.getRentalPrice();
-                subtotalPrice += tempPrice * quantity;
-                break;
-            case 4:
-                tempPrice = newBook.getEbookPrice();
-                subtotalPrice += tempPrice * quantity;
-                break;
-            //TODO: Write Exception handling here
-            default:
-                break;
-        }
         try {
             switch (type) {
                 case 1:
@@ -210,6 +189,8 @@ public class ShoppingCart {
                         quantityInCart.add(quantity);
                         bookType.add(type);
                         numItemsInCart += quantity;
+                        tempPrice = newBook.getNewPrice();
+                        subtotalPrice += tempPrice * quantity;
                     } else {
                         //TODO Error message
                     }
@@ -220,6 +201,8 @@ public class ShoppingCart {
                         quantityInCart.add(quantity);
                         bookType.add(type);
                         numItemsInCart += quantity;
+                        tempPrice = newBook.getUsedPrice();
+                        subtotalPrice += tempPrice * quantity;
                     } else {
                         //TODO Error message
                     }
@@ -230,6 +213,8 @@ public class ShoppingCart {
                         quantityInCart.add(quantity);
                         bookType.add(type);
                         numItemsInCart += quantity;
+                        tempPrice = newBook.getRentalPrice();
+                        subtotalPrice += tempPrice * quantity;
                     } else {
                         //TODO Error message
                     }
@@ -240,6 +225,8 @@ public class ShoppingCart {
                         quantityInCart.add(quantity);
                         bookType.add(type);
                         numItemsInCart += quantity;
+                        tempPrice = newBook.getEbookPrice();
+                        subtotalPrice += tempPrice * quantity;
                     } else {
                         //TODO Error message
                     }
