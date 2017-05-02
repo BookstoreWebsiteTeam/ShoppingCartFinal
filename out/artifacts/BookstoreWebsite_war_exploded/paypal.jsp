@@ -19,7 +19,7 @@
     </tr>
 </table>
 
-<h1>&emsp;&emsp;Please Login to your PayPal Account</h1>
+<h1>&emsp;Please Login to your PayPal Account</h1>
 <form method="post" action="${pageContext.request.contextPath}/paypalController">
     <table>
         <tr>

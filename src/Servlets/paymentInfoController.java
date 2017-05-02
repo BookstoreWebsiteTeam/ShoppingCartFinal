@@ -1,4 +1,4 @@
-package Servlets;
+package Servlet;
 
 import Objects.OrderInfoHandler;
 
@@ -33,23 +33,23 @@ public class paymentInfoController extends HttpServlet {
                 String cardCvv = request.getParameter("cvv");
                 int intCardCvv = Integer.parseInt(cardCvv);
                 if(creditNumLength != 16 || intCardYear < 2017 || intCardCvv != 777) {
-                    response.sendRedirect("http://localhost:8080/BookstoreWebsite_war_exploded/paymentInfo.jsp"); //sends the user to the paymentInfo page
+                    response.sendRedirect("http://localhost:8080/paymentInfo.jsp"); //sends the user to the paymentInfo page
                     return;
                 } else {
                     orderInfo.setPaymentChoice("Credit Card");
                     session.setAttribute("orderInfo", orderInfo);
-                    response.sendRedirect("http://localhost:8080/BookstoreWebsite_war_exploded/confirmation.jsp");
+                    response.sendRedirect("http://localhost:8080/OrderConfirmation.jsp");
                     return;
                 }
             } else if (paymentSelection.equals("paypal")) {
                 orderInfo.setPaymentChoice("Paypal");
                 session.setAttribute("orderInfo", orderInfo);
-                response.sendRedirect("http://localhost:8080/BookstoreWebsite_war_exploded/paypal.jsp"); //sends the user to the paypal page
+                response.sendRedirect("http://localhost:8080/paypal.jsp"); //sends the user to the paypal page
                 return;
             } else {
                 orderInfo.setPaymentChoice("Financial Aid");
                 session.setAttribute("orderInfo", orderInfo);
-                response.sendRedirect("http://localhost:8080/BookstoreWebsite_war_exploded/login.jsp"); //sends the user to the financial aid login page
+                response.sendRedirect("http://localhost:8080/Login.jsp"); //sends the user to the financial aid login page
             }
         }
 
